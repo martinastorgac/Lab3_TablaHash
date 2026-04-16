@@ -1,0 +1,15 @@
+Thu Apr 16 08:47:47 PM UTC 2026: 
+ hashmap.c | 26 ++++++++++++++++++++++++++
+ 1 file changed, 26 insertions(+)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:63:25: error: passing argument 2 of ‘hash’ makes integer from pointer without a cast [-Wint-conversion]
+   63 |     long pos = hash(key,value) ;
+      |                         ^~~~~
+      |                         |
+      |                         void *
+hashmap.c:28:29: note: expected ‘long int’ but argument is of type ‘void *’
+   28 | long hash( char * key, long capacity) {
+      |                        ~~~~~^~~~~~~~
+b0fbc57
