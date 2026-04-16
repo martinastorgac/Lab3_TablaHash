@@ -60,7 +60,7 @@ HashMap * createMap(long capacity) {
 
 void insertMap(HashMap * map, char * key, void * value) {
 
-    long pos = hash(key,value) ;
+    long pos = hash(key,map->capacity) ;
     Pair *par = createPair(key,value) ;
     par->key = key ;
     par->value = value ;
