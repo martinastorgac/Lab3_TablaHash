@@ -19,3 +19,14 @@ Thu Apr 16 08:48:45 PM UTC 2026:
  tests:  3|6
 total_score: 5/60
 d62a571
+Sat Apr 18 05:32:56 PM UTC 2026: 
+ hashmap.c | 17 +++++++++++++++++
+ 1 file changed, 17 insertions(+)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘createMap’:
+hashmap.c:51:11: error: ‘HashMap’ {aka ‘struct HashMap’} has no member named ‘currrent’; did you mean ‘current’?
+   51 |     mapa->currrent = -1 ;
+      |           ^~~~~~~~
+      |           current
+30797ea

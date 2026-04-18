@@ -46,6 +46,23 @@ int is_equal(void* key1, void* key2){
 
 HashMap * createMap(long capacity) {
 
+    HashMap *mapa ;
+    mapa->capacity = capacity ;
+    mapa->currrent = -1 ;
+    for (int i = 0 ; i < capacity ; i++)
+    {
+        char *key = NULL ;
+        void *value = NULL ;
+        Pair *par = createPair(key,value) ;
+        mapa->buckets[i] = par ;
+        mapa->size ++ ;
+            
+    }
+
+    return mapa ;
+
+    
+
     return NULL;
 }
 
