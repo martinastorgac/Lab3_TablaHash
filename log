@@ -119,3 +119,17 @@ Sat Apr 18 05:40:53 PM UTC 2026:
  tests:  3|6
 total_score: 5/60
 ca98a7b
+Sat Apr 18 05:43:44 PM UTC 2026: 
+ hashmap.c | 10 +---------
+ 1 file changed, 1 insertion(+), 9 deletions(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘createMap’:
+hashmap.c:53:11: error: unused variable ‘value’ [-Werror=unused-variable]
+   53 |     void *value = NULL ;
+      |           ^~~~~
+hashmap.c:52:11: error: unused variable ‘key’ [-Werror=unused-variable]
+   52 |     char *key = NULL ;
+      |           ^~~
+cc1: all warnings being treated as errors
+828fb98
