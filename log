@@ -240,3 +240,18 @@ Sat Apr 18 09:12:26 PM UTC 2026:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 ce75638
+Sat Apr 18 09:14:46 PM UTC 2026: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:121:19: error: ‘HashMap’ {aka ‘struct HashMap’} has no member named ‘bucket’; did you mean ‘buckets’?
+  121 |         if ((map->bucket[pos] == NULL) || (map->bucket[pos]->key == NULL)) return NULL ;
+      |                   ^~~~~~
+      |                   buckets
+hashmap.c:121:49: error: ‘HashMap’ {aka ‘struct HashMap’} has no member named ‘bucket’; did you mean ‘buckets’?
+  121 |         if ((map->bucket[pos] == NULL) || (map->bucket[pos]->key == NULL)) return NULL ;
+      |                                                 ^~~~~~
+      |                                                 buckets
+79ffd34
