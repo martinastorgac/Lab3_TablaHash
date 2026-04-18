@@ -30,3 +30,17 @@ hashmap.c:51:11: error: ‘HashMap’ {aka ‘struct HashMap’} has no member n
       |           ^~~~~~~~
       |           current
 30797ea
+Sat Apr 18 05:33:15 PM UTC 2026: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘createMap’:
+hashmap.c:50:20: error: ‘mapa’ is used uninitialized [-Werror=uninitialized]
+   50 |     mapa->capacity = capacity ;
+      |     ~~~~~~~~~~~~~~~^~~~~~~~~~
+hashmap.c:49:14: note: ‘mapa’ was declared here
+   49 |     HashMap *mapa ;
+      |              ^~~~
+cc1: all warnings being treated as errors
+458cd8a

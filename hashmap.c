@@ -48,7 +48,7 @@ HashMap * createMap(long capacity) {
 
     HashMap *mapa ;
     mapa->capacity = capacity ;
-    mapa->currrent = -1 ;
+    mapa->current = -1 ;
     for (int i = 0 ; i < capacity ; i++)
     {
         char *key = NULL ;
