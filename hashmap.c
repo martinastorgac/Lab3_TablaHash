@@ -77,9 +77,8 @@ void insertMap(HashMap * map, char * key, void * value) {
 
     long pos = hash(key,map->capacity) ;
     Pair *par = createPair(key,value) ;
-    if (!map->buckets[pos]) return ;
     
-    if (!map->buckets[pos]->key)
+    if ((!map->buckets[pos]->key) || (!map->buckets[pos]))
     {
         map->buckets[pos] = par ;
         map->size += 1 ;
@@ -87,7 +86,7 @@ void insertMap(HashMap * map, char * key, void * value) {
     }
     else
     {
-        while (map->buckets[pos]->key != NULL)
+        while ((map->buckets[pos]->key != NULL) || (map->buckets[pos] != NULL))
         {
             pos = (pos + 1) % map->capacity ;
         }
