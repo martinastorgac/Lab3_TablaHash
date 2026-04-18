@@ -49,7 +49,7 @@ HashMap * createMap(long capacity) {
     HashMap *mapa = malloc(sizeof(HashMap)) ;
     mapa->capacity = capacity ;
     mapa->current = -1 ;
-    mapa->buckets = NULL ;
+    mapa->buckets = malloc(sizeof(Pair)) ;
     for (int i = 0 ; i < capacity ; i++)
     {
         char *key = NULL ;
