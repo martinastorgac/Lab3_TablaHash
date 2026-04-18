@@ -117,7 +117,7 @@ Pair * searchMap(HashMap * map,  char * key) {
 
     if (map->buckets[pos] == NULL)  return NULL ;
     
-    while ((map->buckets[pos] != NULL) || (map->buckets[pos]->key != NULL))
+    while (map->buckets[pos]->key != NULL)
     {
         if (strcmp(map->buckets[pos]->key,key) == 0)
         {
