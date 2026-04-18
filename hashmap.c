@@ -50,13 +50,13 @@ HashMap * createMap(long capacity) {
     mapa->capacity = capacity ;
     mapa->current = -1 ;
     mapa->buckets = malloc(sizeof(Pair)) ;
+    mapa->size = 0 ;
     for (int i = 0 ; i < capacity ; i++)
     {
         char *key = NULL ;
         void *value = NULL ;
         Pair *par = createPair(key,value) ;
         mapa->buckets[i] = par ;
-        mapa->size ++ ;
             
     }
 
