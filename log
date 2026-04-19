@@ -411,3 +411,16 @@ Sun Apr 19 08:50:23 PM UTC 2026:
  tests:  17|0
 total_score: 60/60
 d2d3df1
+Sun Apr 19 08:51:37 PM UTC 2026: 
+ hashmap.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:224:69: error: expected ‘;’ before ‘map’
+  224 |             insertMap(map, oldBuckets[j]->key, oldBuckets[j]->value)
+      |                                                                     ^
+      |                                                                     ;
+  225 |             map->size ++ ;
+      |             ~~~                                                      
+b69dcb1

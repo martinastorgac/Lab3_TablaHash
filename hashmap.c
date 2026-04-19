@@ -221,7 +221,8 @@ void enlarge(HashMap * map) {
     {
         if ((oldBuckets[j] != NULL) && (oldBuckets[j]->key != NULL))
         {
-            insertMap(map, oldBuckets[j]->key, oldBuckets[j]->value) ;
+            insertMap(map, oldBuckets[j]->key, oldBuckets[j]->value) 
+            map->size ++ ;
             
         }
     }
