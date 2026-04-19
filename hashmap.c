@@ -179,7 +179,22 @@ Pair * firstMap(HashMap * map) {
 
 Pair * nextMap(HashMap * map) {
 
-    return NULL;
+    int pos = map->current + 1 ;
+
+    if (map->buckets[pos])
+    {
+        map->current = pos ;
+        return map->buckets[pos] ;
+    }
+    while (map->buckets[pos] == NULL)
+    {
+        if (pos == (map->size - 1)) return NULL ;
+        pos ++ ;
+    }
+
+    map->current = pos ;
+    return map->buckets[pos] ;
+
 }
 
 
