@@ -162,7 +162,7 @@ Pair * firstMap(HashMap * map) {
 
     for (int pos = 0 ; pos < map->capacity ; pos++)
     {
-        if (map->buckets[pos]) && (map->buckets[pos]->key))
+        if ((map->buckets[pos]) && (map->buckets[pos]->key))
         {
             map->current = pos ;
             return map->buckets[pos] ;
