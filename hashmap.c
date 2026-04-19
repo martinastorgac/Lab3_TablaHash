@@ -219,9 +219,9 @@ void enlarge(HashMap * map) {
 
     for (int j = 0 ; j < oldCapacity ; j++)
     {
-        if ((oldBuckets[i] != NULL) && (oldBuckets[i]->key != NULL))
+        if ((oldBuckets[j] != NULL) && (oldBuckets[j]->key != NULL))
         {
-            insertMap(map, oldBuckets[i]->key, oldBuckets[i]->value) ;
+            insertMap(map, oldBuckets[j]->key, oldBuckets[j]->value) ;
             
         }
     }
