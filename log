@@ -312,3 +312,15 @@ Sun Apr 19 03:27:57 PM UTC 2026:
  tests:  11|2
 total_score: 40/60
 5965916
+Sun Apr 19 03:36:34 PM UTC 2026: 
+ hashmap.c | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘firstMap’:
+hashmap.c:163:5: error: ‘pos’ undeclared (first use in this function); did you mean ‘pow’?
+  163 |     pos = 0 ;
+      |     ^~~
+      |     pow
+hashmap.c:163:5: note: each undeclared identifier is reported only once for each function it appears in
+efab423
