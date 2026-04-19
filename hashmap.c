@@ -160,21 +160,16 @@ void eraseMap(HashMap * map,  char * key) {
 
 Pair * firstMap(HashMap * map) {
 
-    int pos = 0 ;
-    if (map->buckets[pos])
+    for (int pos = 0 ; pos < map->capacity ; pos++)
     {
-        map->current = pos ;
-        return map->buckets[pos] ; 
-    }
-    while (map->buckets[pos] == NULL)
-    {
-        if (pos == (map->capacity - 1)) return NULL ;
-        pos ++ ;
+        if (map->buckets[pos])
+        {
+            map->current = pos ;
+            return map->buckets[pos] ;
+        }  
     }
 
-    map->current = pos ;
-    return map->buckets[pos] ;
-    
+    return NULL ;
 }
 
 Pair * nextMap(HashMap * map) {
