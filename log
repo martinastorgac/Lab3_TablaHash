@@ -364,3 +364,21 @@ Sun Apr 19 07:37:50 PM UTC 2026:
  tests:  12|2
 total_score: 40/60
 704d623
+Sun Apr 19 08:02:15 PM UTC 2026: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘firstMap’:
+hashmap.c:165:35: error: expected identifier before ‘(’ token
+  165 |         if (map->buckets[pos]) && (map->buckets[pos]->key))
+      |                                   ^
+hashmap.c:165:9: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+  165 |         if (map->buckets[pos]) && (map->buckets[pos]->key))
+      |         ^~
+hashmap.c:165:59: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  165 |         if (map->buckets[pos]) && (map->buckets[pos]->key))
+      |                                                           ^
+hashmap.c:165:59: error: expected statement before ‘)’ token
+cc1: all warnings being treated as errors
+c7def17
