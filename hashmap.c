@@ -202,28 +202,31 @@ Pair * nextMap(HashMap * map) {
 
 void enlarge(HashMap * map) {
     enlarge_called = 1; //no borrar (testing purposes)
-    // 1. guardar buckets antiguos
-    Pair ** oldBuckets = map->buckets;
-    long oldCapacity = map->capacity;
+    
+    Pair **oldBuckets = map->buckets ;
+    long oldCapacity = map->capacity ;
 
-    // 2. duplicar capacidad
-    map->capacity *= 2;
+    map->capacity = map->capacity * 2 ;
 
-    // 3. crear nuevo arreglo
-    map->buckets = malloc(sizeof(Pair*) * map->capacity);
-    for (int i = 0; i < map->capacity; i++) {
-        map->buckets[i] = NULL;
+    map->buckets = malloc(sizeof(Pair*) * map->capacity) ;
+
+    for (int i = 0 ; i < map->capacity ; i++)
+    {
+        map->buckets[i] = NULL ;
     }
 
-    // 4. reiniciar size
-    map->size = 0;
+    map->size = 0 ;
 
-    // 5. reinsertar elementos válidos
-    for (int i = 0; i < oldCapacity; i++) {
-        if (oldBuckets[i] != NULL && oldBuckets[i]->key != NULL) {
-            insertMap(map, oldBuckets[i]->key, oldBuckets[i]->value);
+    for (int j = 0 ; j < oldCapacity ; j++)
+    {
+        if ((oldBuckets[i] != NULL) && (oldBuckets[i]->key != NULL))
+        {
+            insertMap(map, oldBuckets[i]->key, oldBuckets[i]->value) ;
+            
         }
     }
+
+    free(oldBuckets) ;
 
 }
 

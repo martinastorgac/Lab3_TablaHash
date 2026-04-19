@@ -394,3 +394,14 @@ Sun Apr 19 08:07:56 PM UTC 2026:
  tests:  17|0
 total_score: 60/60
 4cbf95c
+Sun Apr 19 08:50:02 PM UTC 2026: 
+ hashmap.c | 21 ++++++++++++---------
+ 1 file changed, 12 insertions(+), 9 deletions(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:222:25: error: ‘i’ undeclared (first use in this function)
+  222 |         if ((oldBuckets[i] != NULL) && (oldBuckets[i]->key != NULL))
+      |                         ^
+hashmap.c:222:25: note: each undeclared identifier is reported only once for each function it appears in
+23f81e8
