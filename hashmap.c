@@ -168,7 +168,7 @@ Pair * firstMap(HashMap * map) {
     }
     while (map->buckets[pos] == NULL)
     {
-        if (pos == (map->size - 1)) return NULL ;
+        if (pos == (map->capacity - 1)) return NULL ;
         pos ++ ;
     }
 
@@ -188,7 +188,7 @@ Pair * nextMap(HashMap * map) {
     }
     while (map->buckets[pos] == NULL)
     {
-        if (pos == (map->size - 1)) return NULL ;
+        if (pos == (map->capacity - 1)) return NULL ;
         pos ++ ;
     }
 
